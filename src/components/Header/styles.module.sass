@@ -1,0 +1,58 @@
+.headerContainer
+    height: 6rem
+    background-color: #141a29
+    padding: 0 25px
+
+.headerContent
+    max-width: 1120px
+    height: 6rem
+    margin: 0 auto 
+    display: flex
+    align-items: center
+
+    & img 
+        cursor: pointer
+        @media (max-width: 600px)
+            width: 50px
+
+    & nav
+        margin-left: 5rem
+        height: 5rem
+        @media (max-width: 600px)
+            display: flex
+            align-items: center
+
+        & a 
+            display: inline-block
+            position: relative
+            padding: 0 0.5rem
+            height: 5rem
+            line-height: 5rem
+            color: #fff
+            @media (max-width: 600px)
+                height: 0rem
+                line-height: 0
+                
+            & + a 
+                margin-left: 2rem
+                @media (max-width: 600px)
+                    margin-left: 1rem
+
+#burguer
+    display: none
+    position: absolute
+    right: 15px
+    @media (max-width: 600px)
+        display: block
+    @media (max-width: 600px)
+        font-size: 10px
+
+.btnDiv
+    margin-left: auto
+    @media (max-width: 600px)
+        display: none
+        position: absolute
+        right: 0px
+        top: 80px
+        background: #141a29
+        padding: 10px
