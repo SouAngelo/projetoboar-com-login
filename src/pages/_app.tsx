@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     <SessionProvider session={session} basePath="/api/auth">
       <PayPalScriptProvider options={initialOptions}>
         <Header />
-        <Component {...pageProps} />
+        <Component {...pageProps}  />
       </PayPalScriptProvider>
     </SessionProvider>
   );
