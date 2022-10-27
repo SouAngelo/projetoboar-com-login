@@ -1,34 +1,15 @@
-
-import styles from './style.module.sass'
-import { FaGithub } from 'react-icons/fa'
-import { FiX } from 'react-icons/fi'
-
-import { signIn, signOut, useSession } from 'next-auth/react'
+import Link from "next/link";
+import styles from "./style.module.sass";
+import { FaUserAlt } from "react-icons/fa";
 
 function Button() {
-
-    const {data: session} = useSession()
-
-  return session ? (
-    <button
-    type='button'
-    className={styles.signInButton}
-    onClick={() => signOut()}
-    >
-        <img src={session.user.image} alt="" />
-         <p>Olá {session.user.name}</p>
-        <FiX color='737380' className={styles.closeIcon}/>
-    </button>
-  ) : (
-    <button
-    type='button'
-    className={styles.signInButton}
-    onClick={() => signIn('github')}
-    >
-        <FaGithub color='#ffb800'/>
-        Entrar com github
-    </button>
-  )
+  return (
+    <Link href="/login">
+      <button type="button" className={styles.signInButton}>
+        <FaUserAlt size={25} /> Fazer login
+      </button>
+    </Link>
+  );
 }
 
-export default Button
+export default Button;
