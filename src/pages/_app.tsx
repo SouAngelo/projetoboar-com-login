@@ -12,10 +12,10 @@ const initialOptions = {
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
-    <SessionProvider session={session} basePath="/api/auth">
+    <SessionProvider session={session} >
       <PayPalScriptProvider options={initialOptions}>
         <Header />
-        <Component {...pageProps}  />
+        <Component {...pageProps} />
       </PayPalScriptProvider>
     </SessionProvider>
   );
